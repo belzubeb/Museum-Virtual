@@ -17,3 +17,7 @@ Route::get('/About', function (){
 Route::get('/News', function (){
     return view('News.index');
 });
+
+Route::get('/NewsOnClick', function (){
+    return view ('News.onClick');
+});
