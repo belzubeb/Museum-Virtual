@@ -34,7 +34,7 @@
     </style>
 
 <  <div class="image-container pt-16">
-    <img src="/src/img/Rectangle 15.png" alt="Hero Image" class="hero-image">
+    <img src="{{ asset('images/bg-home.png')}}" alt="Hero Image" class="hero-image">
     <div class="image-overlay">
         <h1 class="text-2xl md:text-2xl font-bold mb-4 text-center">About Us</h1>
         <p class="text-center text-base md:text-base px-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita est fugiat velit obcaecati, consectetur commodi rerum ducimus repellendus! Accusamus perferendis corporis eius pariatur ad debitis commodi voluptas amet suscipit laborum sit molestiae dicta quasi, eum animi! Facilis fugiat doloribus quam nesciunt vitae totam autem nemo expedita explicabo, non in dolore?</p>
@@ -50,7 +50,7 @@
         </p>
     </div>
     <div class="md:w-1/2">
-        <img src="/src/img/Rectangle 12.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Project Image" class="w-full rounded-lg shadow-lg">
     </div>
 </div>
 </section>
@@ -58,77 +58,77 @@
 <h2 class="text-center text-3xl font-bold mb-8">Meet Our Beautiful Team</h2>
 <div class="flex overflow-x-auto space-x-8 py-4">
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 1</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, beatae.</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 2</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, deserunt.</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 3</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, explicabo!</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 4</h3>
             <p class="text-sm text-gray-200">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, et?</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 5</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, sapiente?</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 6</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, qui?</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 7</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, est.</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 8</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nihil.</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 9</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laboriosam.</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 10</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, amet?</p>
         </div>
     </div>
     <div class="team-card relative bg-white shadow-lg rounded-lg overflow-hidden w-64 flex-shrink-0">
-        <img src="/src/img/Berita1.png" alt="Team Member" class="w-full h-48 object-cover">
+        <img src="{{ asset('images/cover-welcome.png')}}" alt="Team Member" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 left-0 p-4 w-full">
             <h3 class="text-xl font-bold text-white">Member 11</h3>
             <p class="text-sm text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, iusto.</p>
