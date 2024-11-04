@@ -1,14 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GalleryController;
 
-Route::get('/', function () {
-    return view('Home.index');
-});
 
-Route::get('/Gallery', function () {
-    return view('Gallery.index');
-});
 
 Route::get('/About', function (){
     return view('About.index');
@@ -21,3 +17,7 @@ Route::get('/News', function (){
 Route::get('/NewsOnClick', function (){
     return view ('News.onClick');
 });
+
+Route::get('/Gallery', [GalleryController::class, 'index']);
+
+Route::get('/', [HomeController::class, 'index']);

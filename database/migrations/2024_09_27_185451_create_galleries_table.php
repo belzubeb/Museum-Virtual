@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
+            $table->string('Title');
+            $table->foreignId('category_id')->references("id")->on('categories');
+            $table->string('Tahun');
+            $table->string('Description');
+            $table->string('Media');
             $table->timestamps();
         });
     }

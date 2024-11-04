@@ -1,43 +1,55 @@
-<nav id="navbar" class="fixed w-full z-30 top-0 bg-white transition duration-300 ease-in-out p-4">
+<nav id="navbar" class="fixed w-full z-30 top-0 bg-green-950 transition duration-300 ease-in-out p-4">
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo di Kiri -->
-        <div class="flex items-center">
+        <div class="flex items-center space-x-4">
             <img src="{{ asset('images/upn-logo.png') }}" alt="UPN Logo" class="h-12 w-12">
+            <div class="text-[#FEFAE0]">
+                <h1 class="text-lg font-bold leading-tight">Museum Bela Negara</h1>
+                <p class="text-sm">UPN "Veteran" Jakarta</p>
+            </div>
         </div>
 
-        <!-- Menu di Kanan -->
+        <!-- Menu di Kanan untuk Desktop -->
         <div class="hidden md:flex space-x-8">
-            <a href="/" class="text-gray-800 hover:text-black transition duration-300">Beranda</a>
-            <a href="/Gallery" class="text-gray-800 hover:text-black transition duration-300">Galeri</a>
-            <a href="/News" class="text-gray-800 hover:text-black transition duration-300">Berita</a>
-            <a href="/About" class="text-gray-800 hover:text-black transition duration-300">Tentang Kami</a>
+            <a href="/" class="text-[#FEFAE0] hover:underline">Beranda</a>
+            <a href="/Gallery" class="text-[#FEFAE0] hover:underline">Galeri</a>
+            <a href="/News" class="text-[#FEFAE0] hover:underline">Berita</a>
+            <a href="/About" class="text-[#FEFAE0] hover:underline">Tentang Kami</a>
         </div>
 
         <!-- Tombol Mobile Menu -->
-        <button class="md:hidden text-black focus:outline-none">
+        <button id="mobile-menu-btn" class="md:hidden text-[#FEFAE0] focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
     </div>
+
+    <!-- Menu Dropdown untuk Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-950 text-[#FEFAE0] p-4">
+        <a href="/" class="block py-2 text-[#FEFAE0] hover:underline">Beranda</a>
+        <a href="/Gallery" class="block py-2 text-[#FEFAE0] hover:underline">Galeri</a>
+        <a href="/News" class="block py-2 text-[#FEFAE0] hover:underline">Berita</a>
+        <a href="/About" class="block py-2 text-[#FEFAE0] hover:underline">Tentang Kami</a>
+    </div>
 </nav>
 
 <script>
-    // Ambil elemen navbar
-    const navbar = document.getElementById('navbar');
-
-    // Tambahkan event listener untuk mendeteksi scroll
+    // Menangani perubahan warna navbar saat scroll
     window.addEventListener('scroll', function() {
-        // Jika scroll lebih dari 50px, tambahkan class untuk transparan
+        const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.classList.remove('bg-white');
-            navbar.classList.add('bg-transparent');
-            navbar.classList.add('text-white');
+            navbar.classList.remove('bg-green-950');
         } else {
-            // Jika tidak di-scroll atau kembali ke atas, kembalikan warna putih
-            navbar.classList.remove('bg-transparent');
-            navbar.classList.remove('text-white');
-            navbar.classList.add('bg-white');
+            navbar.classList.add('bg-green-950');
         }
+    });
+
+    // Menangani menu dropdown untuk mobile
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden'); // Toggle visibility menu mobile
     });
 </script>
