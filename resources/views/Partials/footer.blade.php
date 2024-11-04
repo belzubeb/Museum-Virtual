@@ -1,23 +1,21 @@
 <!-- resources/views/footer.blade.php -->
-<footer class="bg-gray-800 text-white py-8 mt-10">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between">
-            <!-- Bagian Kiri: Informasi Kontak -->
-            <div class="mb-6 md:mb-0">
-                <h3 class="text-lg font-bold mb-2">UPN Museum Virtual</h3>
-                <p>Jl. Raya UPN Veteran, Jakarta</p>
-                <p>Email: <a href="mailto:info@upnmuseum.ac.id" class="text-blue-400 hover:underline">info@upnmuseum.ac.id</a></p>
-                <p>Telepon: (0274) 123456</p>
-            </div>
+<footer class="bg-green-950 text-white py-4 md:py-8">
+    <div class="mx-auto px-6 flex flex-col md:flex-row justify-between md:gap-x-16 space-y-8 md:space-y-0">
+        <div class="mb-4 md:mb-0 space-y-3">
+            <h3 class="font-semibold text-lg mb-4">UPN Museum Virtual</h3>
+            <p >Jalan R.S. Fatmawati Raya, Pondok Labu, Cilandak, South Jakarta City,<br>Jakarta 12450</p>
+            <p >Email: <a href="mailto:info@museumvirtual.id" class="underline text-blue-600">info@museumvirtual.id</a></p>
+            <p >Telepon: (0274) 123456</p>
+        </div>
 
             <!-- Bagian Tengah: Tautan -->
             <div class="mb-6 md:mb-0">
                 <h3 class="text-lg font-bold mb-2">Navigasi</h3>
                 <ul>
-                    <li class="mb-2"><a href="#" class="hover:underline">Beranda</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">Galeri</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">Berita</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="/" class="hover:underline">Beranda</a></li>
+                    <li class="mb-2"><a href="/Gallery" class="hover:underline">Galeri</a></li>
+                    <li class="mb-2"><a href="/News" class="hover:underline">Berita</a></li>
+                    <li class="mb-2"><a href="/About" class="hover:underline">Tentang Kami</a></li>
                 </ul>
             </div>
 
