@@ -21,3 +21,11 @@ Route::get('/NewsOnClick', function (){
 Route::get('/Gallery', [GalleryController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/GalleryOnclick', function (){
+    return view ('Gallery.onClick');
+});
+
+Route::get('/AboutOnclick', function (){
+    return view ('About.onClick');
+});
