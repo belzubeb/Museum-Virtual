@@ -1,41 +1,135 @@
 @extends('layout.index')
 @section('container')
 
-    <style>
-        .hero-image {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        }
+<style>
+    .hidden {
+        display: none;
+    }
 
-        .image-container {
-            height: 50vh;
-            overflow: hidden;
-            position: relative;
-        }
+    .hero-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
 
-        .image-overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
+    .image-container {
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+    }
 
-        .team-card img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    .image-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .team-card img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .custom-underline {
+        text-decoration: none;
+        border-bottom: 2px solid currentColor;
+        padding-bottom: 2px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.6s ease-in-out;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+
+    .carousel-slide.active {
+        opacity: 1;
+        position: static;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-indicators {
+        position: relative;
+        z-index: 10;
+        margin-top: 1rem;
+    }
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+        background-color: #C5E1B5;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .indicator.active {
+        background-color: #C5E1B5;
+        transform: scale(1.2);
+    }
+
+    .carousel-indicators .indicator {
+        cursor: pointer;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background-color: #C5E1B5;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }       
+
+    .carousel-indicators .indicator.active {
+        width: 32px;
+        height: 12px;
+        background-color: #172812;
+        border-radius: 20px;
+    }
+
+
+    .carousel-indicators .indicator.active::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #C5E1B5;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+
+</style>
 
     <body class="font-poppins">
         <section class="relative text-[#FBFCFE] pt-20 md:pt-20">
-            <img src="img/Rectangle 39.png" alt="Museum Interior"
+            <img src="{{ asset('images/member/Member.png') }}" alt="Museum Interior"
                 class="w-full h-auto md:h-[600px] object-cover z-10 opacity-90">
             <div class="absolute inset-0 bg-black opacity-30"></div>
             <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-16 z-10">
@@ -69,7 +163,8 @@
                     </p>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="/src/img/Kelompok.png" alt="Project Image" class="w-full rounded-lg shadow-lg">
+                    <img src="{{ asset('images/member/Kelompok.png') }}" alt="Project Image"
+                        class="w-full rounded-lg shadow-lg">
                 </div>
             </div>
         </section>
@@ -78,77 +173,77 @@
             <h2 class="text-left text-3xl font-bold mb-8 custom-underline text-[#172812]">Meet Our Beautiful Team</h2>
             <div class="flex overflow-x-auto space-x-8 py-4">
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Akhdan.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Akhdan.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
-                        <h3 class="text-xl font-bold text-[#FBFCFE]">Muhamad Akhdan</h3>
+                        <h3 class="text-xl font-bold text-[#FBFCFE]">Akhdan Najib</h3>
                         <p class="text-base text-[#FBFCFE]">Ketua / Webdev</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Akbar.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Akbar.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Akbar Azacky</h3>
                         <p class="text-base text-[#FBFCFE]">Wakil / Animator</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Firda.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Firda.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Nuzulul Firdaus</h3>
                         <p class="text-base text-[#FBFCFE]">Sekretaris / Designer</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Syawalia.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Syawalia.JPG') }}"alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Syawalia Nurul</h3>
                         <p class="text-base text-[#FBFCFE]">Bendahara / Copywriter</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Evans.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Evans.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Evans Ahmad</h3>
                         <p class="text-base text-[#FBFCFE]">Koor. Lapangan / Animator</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Sony.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Sony.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Sony Saputra</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Webdev</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Bima.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Bima.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Bima Dwidharma</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Copywriter</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Mujahid.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Mujahid.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Mujahid Azzam</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Designer</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Irsyad.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Irsyad.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Irsyad Irfan</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Animator</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="img/Samuel.JPG" alt="Team Member" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Samuel.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Samuel Mangihut</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Webdev</p>
                     </div>
                 </div>
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
-                    <img src="/src/img/Faris.JPG" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/member/Faris.JPG') }}" class="w-full h-48 object-cover">
                     <div class="absolute bottom-0 left-0 p-4 w-full">
                         <h3 class="text-xl font-bold text-[#FBFCFE]">Faris Rama</h3>
                         <p class="text-base text-[#FBFCFE]">Staff / Webdev</p>
@@ -158,19 +253,18 @@
             <div class="carousel-container flex flex-col items-center mt-8">
                 <div class="carousel w-full md:w-4/6 lg:w-3/5 rounded-lg shadow-lg overflow-hidden relative">
                     <div class="carousel-slide">
-                        <img src="/src/img/webdev.JPG" alt="Team Image 1" class="w-full">
+                        <img src="{{ asset('images/member/webdev.JPG') }}" alt="Team Image 1" class="w-full">
                     </div>
                     <div class="carousel-slide">
-                        <img src="/src/img/Design.JPG" alt="Team Image 2" class="w-full">
+                        <img src="{{ asset('images/member/Design.JPG') }}" alt="Team Image 2" class="w-full">
                     </div>
                     <div class="carousel-slide">
-                        <img src="/src/img/Alice.JPG" alt="Team Image 3" class="w-full">
+                        <img src="{{ asset('images/member/Alice.JPG') }}"alt="Team Image 3" class="w-full">
                     </div>
                     <div class="carousel-slide">
-                        <img src="/src/img/Sekretaris.JPG" alt="Team Image 3" class="w-full">
+                        <img src="{{ asset('images/member/Sekretaris.JPG') }}" alt="Team Image 3" class="w-full">
                     </div>
                 </div>
-
                 <div class="carousel-indicators flex justify-center mt-4 space-x-4">
                     <button class="indicator w-3 h-3 bg-[#FBFCFE] rounded-full transition-all duration-300 ease-in-out"
                         data-slide="0"></button>
@@ -281,4 +375,37 @@
                 </div>
             </section>
         </div>
+        <script>
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
+
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+
+            setInterval(nextSlide, 5000);
+
+            showSlide(currentSlide);
+        </script>
     </body>

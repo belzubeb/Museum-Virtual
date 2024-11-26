@@ -1,6 +1,5 @@
 @extends('layout.index')
 @section('container')
-
     <body class="font-poppins bg-[#FBFCFE]">
         <main class="mx-auto px-4 pt-24 grid lg:grid-cols-3 gap-8">
             <aside class="bg-[#FBFCFE] p-2 shadow-lg flex flex-col h-full w-full">
@@ -8,7 +7,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/gotong-royong.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -21,7 +20,7 @@
                     <div class="bg-white shadow-lg overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/menjaga-lingkungan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -34,7 +33,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/relawan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -47,7 +46,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/Prestasi.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -60,7 +59,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/gotong-royong.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -73,7 +72,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/menjaga-lingkungan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -86,7 +85,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/relawan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -99,7 +98,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/relawan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -112,7 +111,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/relawan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -125,7 +124,7 @@
                     <div class="bg-[#FBFCFE] shadow-md overflow-hidden w-full max-w-md md:max-w-xs">
                         <div class="relative">
                             <a href="#">
-                                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-auto">
+                                <img src="{{asset('images/relawan.jpg')}}" alt="Prestasi" class="w-full h-auto">
                             </a>
                         </div>
                         <div class="p-4">
@@ -148,7 +147,7 @@
                         <p class="text-sm text-[#292828] pl-6">23 Oktober, 2024</p>
                     </div>
                     <div class="flex justify-center my-8">
-                        <img src="img/Rectangle 36.png" alt="Meeting Image"
+                        <img src="{{asset('images/Prestasi.jpg')}}" alt="Meeting Image"
                             class="rounded-lg shadow-md w-full max-w-[100%] h-[450px] object-cover">
                     </div>
                     <h3 class="text-3xl md:text-3xl font-bold text-[#172812] text-justify mb-4">
