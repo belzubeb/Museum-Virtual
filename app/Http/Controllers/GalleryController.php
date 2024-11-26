@@ -12,4 +12,11 @@ class GalleryController extends Controller
         $galleries = Gallery::all(); 
     return view('Gallery.index', compact('galleries')); 
     }
+
+    public function show(Gallery $gallery)
+    {
+        return view('Gallery.show', [
+            'gallery' => $gallery
+        ]);
+    }
 }

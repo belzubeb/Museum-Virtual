@@ -12,7 +12,7 @@
         <!-- Menu di Kanan untuk Desktop -->
         <div class="hidden md:flex space-x-8">
             <a href="/" class="text-[#FEFAE0] hover:underline">Beranda</a>
-            <a href="/Gallery" class="text-[#FEFAE0] hover:underline">Galeri</a>
+            <a href="/Galleries" class="text-[#FEFAE0] hover:underline">Galeri</a>
             <a href="/News" class="text-[#FEFAE0] hover:underline">Berita</a>
             <a href="/About" class="text-[#FEFAE0] hover:underline">Tentang Kami</a>
         </div>
@@ -28,7 +28,7 @@
     <!-- Menu Dropdown untuk Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-green-950 text-[#FEFAE0] p-4">
         <a href="/" class="block py-2 text-[#FEFAE0] hover:underline">Beranda</a>
-        <a href="/Gallery" class="block py-2 text-[#FEFAE0] hover:underline">Galeri</a>
+        <a href="/Galleries" class="block py-2 text-[#FEFAE0] hover:underline">Galeri</a>
         <a href="/News" class="block py-2 text-[#FEFAE0] hover:underline">Berita</a>
         <a href="/About" class="block py-2 text-[#FEFAE0] hover:underline">Tentang Kami</a>
     </div>
@@ -36,15 +36,7 @@
 
 <script>
     // Menangani perubahan warna navbar saat scroll
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.remove('bg-green-950');
-        } else {
-            navbar.classList.add('bg-green-950');
-        }
-    });
-
+    
     // Menangani menu dropdown untuk mobile
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
