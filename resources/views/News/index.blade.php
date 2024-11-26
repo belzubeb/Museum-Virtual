@@ -68,8 +68,8 @@
     }
 </style>
 
-<main class="flex flex-col items-center pt-20 px-6 md:px-12 lg:px-16 xl:px-20">
-    <div class="relative w-full shadow-2xl">
+<main class="flex flex-col items-center px-6 md:px-12 lg:px-16 xl:px-20">
+    <div class="relative w-screen -mx-6 md:-mx-12 lg:-mx-16 xl:-mx-20 shadow-2xl">
         <img src="{{ asset('images/cover-berita.png')}}" alt="Gambar" class="w-full h-auto object-cover rounded-xl">
         <div class="absolute bottom-0 left-0 p-4 bg-gradient-to-t rounded-b-xl">
             <h2 class="text-white text-xl md:text-2xl font-bold">Perpisahan Magang Kampus Merdeka:</h2>
@@ -84,7 +84,7 @@
         <h3 class="pl-1 pt-2">Lastest News</h3>
         <div id="sliderTrack" class="slider-track">
             <div class="slider-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
-                <a href="">
+                <a href="/Newsshow">
                     <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6">

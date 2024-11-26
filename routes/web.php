@@ -14,18 +14,17 @@ Route::get('/News', function (){
     return view('News.index');
 });
 
-Route::get('/NewsOnClick', function (){
-    return view ('News.onClick');
+Route::get('/Newsshow', function (){
+    return view ('News.show');
 });
 
-Route::get('/Gallery', [GalleryController::class, 'index']);
+Route::get('/Galleries', [GalleryController::class, 'index']);
+
+Route::get('/Galleries/{gallery}', [GalleryController::class, 'show']);
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/GalleryOnclick', function (){
-    return view ('Gallery.onClick');
-});
 
-Route::get('/AboutOnclick', function (){
-    return view ('About.onClick');
+Route::get('/Aboutshow', function (){
+    return view ('About.show');
 });

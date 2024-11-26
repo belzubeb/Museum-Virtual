@@ -1,317 +1,227 @@
 @extends('layout.index')
 @section('container')
-@foreach ($galleries as $item)
-
-<style>
-    .hero-image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    .image-container {
-        height: 50vh;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .image-overlay {
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-
-    .custom-underline {
-        text-decoration: none;
-        border-bottom: 1px solid currentColor;
-        padding-bottom: 1px;
-    }
-
-    .underline-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid currentColor;
-        padding-bottom: 0.5rem;
-    }
-
-    .underline-container h2 {
-        margin: 0;
-    }
-
-    .underline-container button {
-        margin-left: auto;
-    }
-
-    .slider-card {
-        min-width: 25%;
-        padding: 1rem;
-        box-sizing: border-box;
-    }
-
-    .slider-card img {
-        width: 100%;
-        height: 12rem; /* Mengatur tinggi gambar */
-        object-fit: cover;
-    }
-
-    .slider-card h2 {
-        font-size: 1.25rem; /* Ukuran font h2 */
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
-
-    .slider-card p {
-        font-size: 0.875rem; /* Ukuran font paragraf */
-        color: #6B7280; /* Warna teks */
-    }
-
-    /* Mobile view: Scroll vertikal di tempat */
-    @media (max-width: 768px) {
-        .galeri-container {
-            overflow-y: auto; /* Aktifkan scroll vertikal */
-            max-height: 48rem; /* Batasi tinggi galeri */
+    <style>
+        .hero-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
-        .galeri-grid {
-            flex-direction: column; /* Stack item secara vertikal */
-            gap: 1rem; /* Jarak antar item vertikal */
+        .image-container {
+            height: 50vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .custom-underline {
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+
+        .underline-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 0.5rem;
+        }
+
+        .underline-container h2 {
+            margin: 0;
+        }
+
+        .underline-container button {
+            margin-left: auto;
         }
 
         .slider-card {
-            width: 98%; /* Kartu mengikuti lebar penuh layar */
+            min-width: 25%;
+            padding: 1rem;
+            box-sizing: border-box;
         }
-    }
 
-</style>
+        .slider-card img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
 
-<div class="image-container pt-16">
-            <img src="{{ asset('images/bg-home.png')}}" alt="Hero Image" class="hero-image">
-            <div class="image-overlay">
-                <h1 class="text-2xl md:text-5xl font-bold mb-4 text-center" style="color: #FEFAE0;">Bangkit Bela Negaraku<br>Jaya Indonesiaku</h1>
-                <a href="/About">
-                <button class="bg-white text-black px-4 py-2 md:px-6 md:py-2 rounded-full font-bold hover:bg-gray-200 transition text-sm md:text-base">
-                    SELENGKAPNYA
-                </button>
+        .slider-card h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .slider-card p {
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+
+        @media (max-width: 768px) {
+            .galeri-container {
+                overflow-y: auto;
+                max-height: 48rem;
+            }
+
+            .galeri-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .slider-card {
+                width: 98%;
+            }
+        }
+    </style>
+
+<section class="relative text-[#FBFCFE] pt-24 px-4">
+    <div class="w-full h-[600px] bg-black bg-opacity-20 rounded-lg" style="background-image: url('img/unsplash.svg'); background-size: cover; background-position: center; background-blend-mode: multiply;"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-start text-left px-6 md:px-16">
+        <h2 class="text-4xl md:text-6xl font-bold">MUSEUM BELA NEGARA</h2>
+        <h2 class="text-4xl md:text-4xl mt-4 font-bold">UPN “ Veteran “ Jakarta</h2>
+        <p class="text-base md:text-base mt-4 max-w-3xl font-reguler">
+            Selamat datang di Museum Virtual Bela Negara, sebuah platform digital yang dirancang untuk memberikan Anda pengalaman eksplorasi sejarah, nilai, dan semangat Bela Negara. Di sini, Anda dapat menjelajahi koleksi artefak, foto, dan cerita inspiratif tentang perjuangan bangsa dalam mempertahankan kedaulatan negara.
+        </p>
+        <a href="about_us.html" class="text-[#272742] bg-[#FBFCFE] font-semibold px-5 py-2 rounded-2xl text-base border border-gray-400 hover:border-black transition flex items-center space-x-2 mt-4">
+            <span>Detail Museum</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h16m0 0l-4-4m4 4l-4 4"></path>
+            </svg>
+        </a>    
+
+    </div>
+</section>
+
+<section class="w-full py-16 px-4">
+    <div class="md:flex items-start space-x-8 mx-auto w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full md:w-1/2">
+            <a href="galeri_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 18.png" alt="Perjanjian Roem Royen" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Perjanjian Roem Royen</h4>
+                    <p class="text-sm text-[#272742]">Terjadi pada tahun 1940, di Jakarta</p>
+                </div>
+            </a>
+            
+            <a href="galeri_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 18.png" alt="Peristiwa Rengasdengklok" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Peristiwa Rengasdengklok</h4>
+                    <p class="text-sm text-[#272742]">Terjadi pada tahun 1940, di Jakarta</p>
+                </div>
+            </a>
+    
+            <a href="galeri_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 18.png" alt="Konferensi Meja Bundar" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Konferensi Meja Bundar</h4>
+                    <p class="text-sm text-[#272742]">Terjadi pada tahun 1940, di Jakarta</p>
+                </div>
+            </a>
+    
+            <a href="galeri_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 18.png" alt="Sumpah Pemuda" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Sumpah Pemuda</h4>
+                    <p class="text-sm text-[#272742]">Terjadi pada tahun 1940, di Jakarta</p>
+                </div>
+            </a>
+        </div>
+    
+        <div class="w-full md:w-1/2 mt-8 md:mt-0">
+            <h2 class="text-2xl md:text-4xl font-bold text-[#172812]">Galeri Sejarah Bela Negara</h2>
+            <p class="text-[#172812] text-base max-w-2xl mt-8">
+                Sebuah perjalanan yang mengajak kita untuk memahami, menghargai, dan meneladani semangat bela negara dari masa ke masa. 
+                Di sini, setiap pameran bercerita tentang kisah-kisah inspiratif para pejuang dan tokoh yang berkorban untuk mempertahankan 
+                kedaulatan, persatuan, dan kemajuan bangsa. Membawa Anda lebih dekat dengan peristiwa dan tokoh-tokoh berpengaruh. Temukan 
+                inspirasi, pelajari nilai-nilai luhur bela negara, dan rasakan semangat patriotisme dalam setiap koleksi yang dipamerkan.
+            </p>
+            <div class="flex justify-end mt-6 pr-6">
+                <a href="galeri.html" class="text-[#272742] bg-[#FBFCFE] font-semibold px-5 py-2 rounded-full text-base border border-gray-400 hover:border-black transition flex items-center space-x-2">
+                    <span>Telusuri Galeri Sejarah</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h16m0 0l-4-4m4 4l-4 4"></path>
+                    </svg>
                 </a>
             </div>
         </div>
-        <main class="mx-auto px-6 py-8">
-            <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div class="space-y-4">
-                    <h2 class="text-xl md:text-2xl font-bold flex justify-between items-center underline-container">
-                        <span>Old Masters</span>
-                        <button class="p-2">
-                            <img src="{{asset('images/arrow-right-linear.svg')}}" alt="Arrow Right">
-                        </button>
-                    </h2>
-                    <div class="h-32 md:h-48">
-                        <img src="{{asset('images/cover-welcome.png')}}" alt="Gambar 1" class="w-full h-full object-cover rounded-lg">
-                    </div>
-                    <h3 class="font-semibold text-xl custom-underline">{{ $item->Title }}</h3>
-                    <p class="text-sm custom-underline">7 Mei 1949</p>
-                    <p class="text-sm custom-underline">Hotel Des Indes, Jakarta</p>
+    </div>
+    
+</section>
+    
+<section class="w-full py-16">
+    <div class="w-full text-center">
+        <h2 class="text-2xl md:text-4xl font-bold text-[#172812]">Implementasi Perilaku Bela Negara</h2>
+        <p class="text-[#272742] text-base max-w-5xl mx-auto mt-8 font-reguler">
+            Melalui konten interaktif, Anda akan menemukan berbagai contoh perilaku bela negara yang relevan dan mudah dilakukan oleh setiap warga negara, baik di lingkungan keluarga, komunitas, maupun dalam profesi. Dari menjaga persatuan hingga berperan aktif dalam kegiatan sosial, halaman ini menampilkan berbagai cara agar kita semua dapat berkontribusi dalam membangun bangsa.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 w-full px-4">
+            <a href="implementasi_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 36.png" alt="Prestasi" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Berprestasi untuk Bangsa</h4>
+                    <p class="text-sm text-[#272742]">Mengembangkan potensi diri dalam bidang akademis, olahraga, seni, atau keterampi....</p>
                 </div>
-                <div class="space-y-4">
-                    <h2 class="text-xl md:text-2xl font-bold flex justify-between items-center underline-container">
-                        <span>Old Masters</span>
-                        <button class="p-2">
-                            <img src="{{asset('images/arrow-right-linear.svg')}}" alt="Arrow Right">
-                        </button>
-                    </h2>
-                    <div class="h-32 md:h-48">
-                        <img src="{{asset('images/cover-welcome.png')}}" alt="Gambar 2" class="w-full h-full object-cover rounded-lg">
-                    </div>
-                    <h3 class="font-semibold text-xl custom-underline">Konferensi Meja Bundar</h3>
-                    <p class="text-sm custom-underline">23 Agustus - 2 November 1949</p>
-                    <p class="text-sm custom-underline">Den Haag, Belanda</p>
+            </a>
+            <a href="implementasi_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 36.png" alt="Gotong Royong" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Gotong Royong</h4>
+                    <p class="text-sm text-[#272742]">Mengembangkan potensi diri dalam bidang sosial, mempererat kerukunan dan kerja....</p>
                 </div>
-                <div class="space-y-4">
-                    <h2 class="text-xl md:text-2xl font-bold flex justify-between items-center underline-container">
-                        <span>Old Masters</span>
-                        <button class="p-2">
-                            <img src="{{asset('images/arrow-right-linear.svg')}}" alt="Arrow Right">
-                        </button>
-                    </h2>
-                    <div class="h-32 md:h-48">
-                        <img src="{{asset('images/cover-welcome.png')}}" alt="Gambar 3" class="w-full h-full object-cover rounded-lg">
-                    </div>
-                    <h3 class="font-semibold text-xl custom-underline">Proklamasi Kemerdekaan</h3>
-                    <p class="text-sm custom-underline">17 Agustus 1945</p>
-                    <p class="text-sm custom-underline">Jl. Pegangsaan Timur 56, Jakarta</p>
+            </a>
+            <a href="implementasi_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 36.png" alt="Menjaga Lingkungan" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Menjaga Lingkungan</h4>
+                    <p class="text-sm text-[#272742]">Memastikan kebersihan dan melindungi alam demi generasi yang akan datang....</p>
                 </div>
-            </section>        
-            <section class="flex flex-col md:flex-row items-center bg-[#92A079] shadow-2xl">
-                <div class="md:w-full p-4 md:p-8 text-center">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center">Selamat Datang di<br>Seni dan Sejarah<br>Museum Bela Negara</h2>
-                    <p class="mb-4 text-xl md:text-lg text-center" >Selamat datang di Museum Virtual Bela Negara, sebuah platform digital yang dirancang untuk memberikan Anda pengalaman eksplorasi sejarah, nilai, dan semangat Bela Negara. Di sini, Anda dapat menjelajahi koleksi artefak, foto, dan cerita inspiratif tentang perjuangan bangsa dalam mempertahankan kedaulatan negara. Kami berharap pengalaman Anda di museum virtual ini dapat meningkatkan pemahaman dan kecintaan Anda terhadap tanah air serta menginspirasi semangat Bela Negara dalam kehidupan sehari-hari. Selamat menikmati eksplorasi digital Anda!</p>
-                    <div class="flex justify-center">
-                        <button class="flex items-center space-x-2 font-semibold text-sm md:text-base justify-center">
-                            <span>LEBIH LANJUT</span>
-                            <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>            
-                <div class="md:w-1/2 h-48 sm:h-80 md:h-96">
-                    <img src="{{asset('images/cover-welcome.png')}}" alt="Museum Interior" class="w-full h-full object-cover object-center">
+            </a>
+            <a href="implementasi_detail.html" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
+                <img src="img/Rectangle 36.png" alt="Menjadi Relawan" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-lg font-bold text-[#172812]">Menjadi Relawan</h4>
+                    <p class="text-sm text-[#272742]">Berpartisipasi dalam kegiatan sosial untuk membantu sesama di masyarakat....</p>
                 </div>
-            </section>
-            <section class="my-8 md:my-16">
-                <div class="underline-container">
-                    <h2 class="text-xl md:text-2xl font-bold">Implementasi Bela Negara</h2>
-                    <button class="flex items-center space-x-2 font-semibold text-xs md:text-sm">
-                        <span>VIEW ALL IMPLEMENTASI BELA NEGARA</span>
-                        <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </button>
+            </a>
+        </div>
+    </div>
+
+</section>
+<section class="w-full pb-16 bg-[#FBFCFE]">
+    <div class="w-full text-center px-4">
+        <h2 class="text-2xl md:text-4xl font-bold text-[#172812]">
+            Nikmati Perjalanan Virtual Museum Bela Negara
+        </h2>
+        <div class="flex justify-center mt-10">
+            <div class="relative w-full max-w-4xl bg-[#FBFCFE] overflow-hidden px-4 md:px-8 rounded-lg">
+                <div class="aspect-video" id="video-container">
+                    <iframe
+                        id="video-frame"
+                        src="https://www.youtube.com/embed/TmPBMzl18aI?si=KoizQfmlAGvqcguy"
+                        title="Video Museum Bela Negara"
+                        frameborder="0"
+                        class="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                        allowfullscreen>
+                    </iframe>
                 </div>
-                <div class="galeri-container overflow-x-auto">
-                    <div class="galeri-grid flex space-x-2 my-1">
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, praesentium.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, error.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, id?</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, sequi.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, vel.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, soluta.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, mollitia.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ratione.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, odio?</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, odio.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="slider-card bg-white rounded-lg overflow-hidden flex flex-col">
-                            <a href="">
-                                <img src="{{ asset('images/bg-home.png')}}" alt="Image 1" class="w-full h-48 object-cover rounded-lg">
-                            </a>                    
-                            <div class="p-2">
-                                <h2 class="text-xl md:text-2xl font-bold my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquid.</h2>
-                                <p class="text-gray-600 text-sm md:text-base">Sambut Umat Katolik</p>
-                                <p class="text-gray-600 my-2 text-sm md:text-base">Tuli Asia</p>
-                                <p class="text-gray-500 text-xs md:text-sm">8 hours ago</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        @endforeach
+            </div>
+        </div>
+    </div>
+</section>
 
 @endsection
