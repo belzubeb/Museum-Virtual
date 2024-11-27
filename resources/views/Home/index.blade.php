@@ -124,7 +124,7 @@
                 <a href="/Galleries/5" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
                     <img src="{{ asset('images/Galeri/perang-ponorogo/Foto-Perang/Jateng1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h4 class="text-lg font-bold text-[#172812]">Peristiwa Perang Diponegoro/h4>
+                        <h4 class="text-lg font-bold text-[#172812]">Peristiwa Perang Diponegoro </h4>
                         <p class="text-sm text-[#272742]">Terjadi pada tahun 1825, di Jawa Tengah</p>
                     </div>
                 </a>
@@ -185,7 +185,7 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 w-full px-4">
                 <a href="/Aboutshow" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{asset('images/Prestasi.jpg')}}" alt="Prestasi" class="w-full h-48 object-cover">
+                    <img src="{{asset('images/implementasi/Prestasi.jpg')}}" alt="Prestasi" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Berprestasi untuk Bangsa</h4>
                         <p class="text-sm text-[#272742]">Mengembangkan potensi diri dalam bidang akademis, olahraga, seni,
@@ -193,7 +193,7 @@
                     </div>
                 </a>
                 <a href="/Aboutshow" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{asset('images/gotong-royong.jpg')}}" alt="Gotong Royong" class="w-full h-48 object-cover">
+                    <img src="{{asset('images/implementasi/gotong-royong.jpg')}}" alt="Gotong Royong" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Gotong Royong</h4>
                         <p class="text-sm text-[#272742]">Mengembangkan potensi diri dalam bidang sosial, mempererat
@@ -201,7 +201,7 @@
                     </div>
                 </a>
                 <a href="/Aboutshow" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{asset('images/menjaga-lingkungan.jpg')}}" alt="Menjaga Lingkungan" class="w-full h-48 object-cover">
+                    <img src="{{asset('images/implementasi/menjaga-lingkungan.jpg')}}" alt="Menjaga Lingkungan" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Menjaga Lingkungan</h4>
                         <p class="text-sm text-[#272742]">Memastikan kebersihan dan melindungi alam demi generasi yang akan
@@ -209,7 +209,7 @@
                     </div>
                 </a>
                 <a href="/Aboutshow" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{asset('images/relawan.jpg')}}" alt="Menjadi Relawan" class="w-full h-48 object-cover">
+                    <img src="{{asset('images/implementasi/relawan.jpg')}}" alt="Menjadi Relawan" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Menjadi Relawan</h4>
                         <p class="text-sm text-[#272742]">Berpartisipasi dalam kegiatan sosial untuk membantu sesama di
