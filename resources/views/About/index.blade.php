@@ -1,131 +1,130 @@
 @extends('layout.index')
 @section('container')
 
-<style>
-    .hidden {
-        display: none;
-    }
+    <style>
+        .hidden {
+            display: none;
+        }
 
-    .hero-image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
+        .hero-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
 
-    .image-container {
-        height: 50vh;
-        overflow: hidden;
-        position: relative;
-    }
+        .image-container {
+            height: 50vh;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .image-overlay {
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
 
-    .team-card img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+        .team-card img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
 
-    .custom-underline {
-        text-decoration: none;
-        border-bottom: 2px solid currentColor;
-        padding-bottom: 2px;
-    }
+        . {
+            text-decoration: none;
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 2px;
+        }
 
-    .carousel {
-        display: flex;
-        transition: transform 0.6s ease-in-out;
-        overflow: hidden;
-        position: relative;
-    }
+        .carousel {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .carousel-slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 300%;
-    }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%;
+        }
 
-    .carousel-slide {
-        flex: 0 0 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.6s ease-in-out;
-    }
+        .carousel-slide {
+            flex: 0 0 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
 
-    .carousel-slide.active {
-        opacity: 1;
-        position: static;
-    }
+        .carousel-slide.active {
+            opacity: 1;
+            position: static;
+        }
 
-    .carousel-slide img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-    }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
 
-    .carousel-indicators {
-        position: relative;
-        z-index: 10;
-        margin-top: 1rem;
-    }
+        .carousel-indicators {
+            position: relative;
+            z-index: 10;
+            margin-top: 1rem;
+        }
 
-    .indicator {
-        width: 12px;
-        height: 12px;
-        background-color: #C5E1B5;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            background-color: #C5E1B5;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
 
-    .indicator.active {
-        background-color: #C5E1B5;
-        transform: scale(1.2);
-    }
+        .indicator.active {
+            background-color: #C5E1B5;
+            transform: scale(1.2);
+        }
 
-    .carousel-indicators .indicator {
-        cursor: pointer;
-        position: relative;
-        width: 12px;
-        height: 12px;
-        background-color: #C5E1B5;
-        border-radius: 50%;
-        transition: all 0.3s ease-in-out;
-    }       
+        .carousel-indicators .indicator {
+            cursor: pointer;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            background-color: #C5E1B5;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+        }
 
-    .carousel-indicators .indicator.active {
-        width: 32px;
-        height: 12px;
-        background-color: #172812;
-        border-radius: 20px;
-    }
+        .carousel-indicators .indicator.active {
+            width: 32px;
+            height: 12px;
+            background-color: #172812;
+            border-radius: 20px;
+        }
 
 
-    .carousel-indicators .indicator.active::after {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #C5E1B5;
-        border-radius: 50%;
-        transition: all 0.3s ease-in-out;
-    }
-
-</style>
+        .carousel-indicators .indicator.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #C5E1B5;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 
     <body class="font-poppins">
         <section class="relative text-[#FBFCFE] pt-20 md:pt-20">
@@ -144,22 +143,32 @@
                 </p>
             </div>
         </section>
-
         <section class="py-16 px-8">
             <div class="md:flex justify-between items-start space-y-8 md:space-y-0">
                 <div class="md:w-1/2 md:pr-16">
                     <h2 class="text-3xl font-bold mb-4 text-[#172812]">
                         Tentang Project
                     </h2>
-                    <p class="text-base leading-relaxed text-[#272742]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, blanditiis minus hic maiores corrupti
-                        perspiciatis ab repellat velit, harum vero corporis minima veritatis, officia quas porro at
-                        repellendus exercitationem totam? Quidem error aut eius, inventore earum sit accusantium. Nemo
-                        corporis facere sapiente aperiam. Praesentium nostrum omnis laudantium commodi totam, eaque quidem
-                        facilis fuga maxime molestias minima earum odit obcaecati dignissimos illo labore, perferendis
-                        tempora recusandae hic, ullam repellendus voluptas minus natus alias? Nesciunt a commodi veniam
-                        quidem libero ducimus neque accusantium dolorum reiciendis nobis pariatur dolor sint facere
-                        explicabo voluptatem quisquam culpa possimus maiores nulla, nam, cupiditate perferendis, in amet?
+                    <p class="text-base leading-relaxed text-[#272742] text-justify">
+                        Museum Virtual Bela Negara diciptakan sebagai wujud komitmen untuk mendukung pelestarian nilai-nilai
+                        patriotisme dan semangat kebangsaan di era digital. Website ini dirancang untuk memudahkan
+                        masyarakat dalam mengeksplorasi sejarah dan perjuangan bangsa secara lebih mendalam. Dengan
+                        pendekatan virtual, pengguna dapat mengakses koleksi artefak, foto, dan dokumen bersejarah kapan
+                        saja dan di mana saja, tanpa harus mengunjungi lokasi fisik museum.
+                    </p>
+                    <p class="text-base leading-relaxed text-[#272742] text-justify mt-4">
+                        Proyek ini bertujuan untuk menciptakan pengalaman edukasi yang menarik dengan memanfaatkan teknologi
+                        visual modern. Dengan galeri yang interaktif dan berbagai fitur multimedia, generasi muda diharapkan
+                        dapat lebih mudah memahami dan menghargai perjuangan para pahlawan. Selain itu, platform ini juga
+                        memberikan ruang untuk menyampaikan nilai-nilai bela negara dengan cara yang relevan dan mudah
+                        diterima oleh masyarakat digital.
+                    </p>
+                    <p class="text-base leading-relaxed text-[#272742] text-justify mt-4">
+                        Melalui Museum Virtual Bela Negara, kami berupaya menginspirasi generasi masa kini untuk terus
+                        menjaga semangat nasionalisme. Proyek ini tidak hanya menjadi bentuk penghormatan terhadap sejarah,
+                        tetapi juga sebagai langkah penting dalam melestarikan warisan budaya bangsa melalui teknologi. Kami
+                        percaya bahwa edukasi sejarah yang dikemas secara inovatif dapat menjadi pondasi kuat dalam
+                        membangun karakter bangsa.
                     </p>
                 </div>
                 <div class="md:w-1/2">
@@ -170,7 +179,7 @@
         </section>
 
         <section class="py-16 px-8">
-            <h2 class="text-left text-3xl font-bold mb-8 custom-underline text-[#172812]">Meet Our Beautiful Team</h2>
+            <h2 class="text-left text-3xl font-bold mb-8  text-[#172812]">Meet Our Beautiful Team</h2>
             <div class="flex overflow-x-auto space-x-8 py-4">
                 <div class="team-card relative bg-[#FBFCFE] rounded-lg overflow-hidden w-64 flex-shrink-0">
                     <img src="{{ asset('images/member/Akhdan.JPG') }}" alt="Team Member" class="w-full h-48 object-cover">
@@ -284,42 +293,58 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">5 Prinsip Bela Negara</h3>
-                    <p class="text-sm text-[#C5E1B5]">Ada lima nilai-nilai dasar yang dikembangkan dalam bela negara agar
-                        menjadi landasan sikap dan perilaku warga negara, yaitu cinta tanah air, sadar berbangsa dan
-                        bernegara,
-                        setia pada Pancasila sebagai ideologi negara, rela berkorban untuk bangsa dan negara, serta
-                        mempunyai
-                        kemampuan awal bela negara.</p>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Bela Negara didasarkan pada lima nilai utama: cinta tanah air, kesadaran berbangsa dan bernegara,
+                        setia
+                        kepada Pancasila sebagai ideologi negara, rela berkorban untuk bangsa dan negara, serta memiliki
+                        kemampuan
+                        awal bela negara. Prinsip-prinsip ini menjadi fondasi untuk membentuk sikap dan perilaku warga
+                        negara yang
+                        bertanggung jawab.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Cinta Tanah Air</h3>
-                    <p class="text-sm text-[#C5E1B5]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        maximus
-                        ac nibh in faucibus. Integer mauris lorem, elementum non justo a, vehicula vehicula lorem.</p>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Cinta tanah air berarti menghargai dan mencintai budaya, tradisi, serta kekayaan alam Indonesia.
+                        Wujud
+                        konkret dari prinsip ini adalah melestarikan lingkungan, menghormati simbol negara, dan menjaga
+                        kedaulatan
+                        bangsa.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Sadar Berbangsa dan Bernegara</h3>
-                    <p class="text-sm text-[#C5E1B5]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        maximus
-                        ac nibh in faucibus. Integer mauris lorem, elementum non justo a, vehicula vehicula lorem.</p>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Prinsip ini mengajarkan pentingnya kesadaran akan keberagaman Indonesia sebagai sebuah bangsa yang
+                        satu.
+                        Masyarakat diharapkan memahami peran mereka dalam menjaga persatuan dan keberlanjutan negara.
+                    </p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Setia pada Pancasila sebagai Ideologi Negara</h3>
-                    <p class="text-sm text-[#C5E1B5]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        maximus
-                        ac nibh in faucibus. Integer mauris lorem, elementum non justo a, vehicula vehicula lorem.</p>
+                    <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Setia kepada Pancasila sebagai Ideologi Negara</h3>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Pancasila sebagai dasar negara menjadi pedoman dalam kehidupan bermasyarakat, berbangsa, dan
+                        bernegara.
+                        Kesetiaan terhadap Pancasila diwujudkan melalui pengamalan nilai-nilai luhur yang terkandung di
+                        dalamnya.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Rela Berkorban untuk Bangsa dan Negara</h3>
-                    <p class="text-sm text-[#C5E1B5]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        maximus
-                        ac nibh in faucibus. Integer mauris lorem, elementum non justo a, vehicula vehicula lorem.</p>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Rela berkorban adalah sikap yang menunjukkan kesediaan untuk mendahulukan kepentingan bangsa di atas
+                        kepentingan pribadi atau kelompok. Prinsip ini mencakup pengorbanan waktu, tenaga, bahkan nyawa demi
+                        kejayaan bangsa.
+                    </p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Mempunyai Kemampuan Awal Bela Negara</h3>
-                    <p class="text-sm text-[#C5E1B5]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        maximus
-                        ac nibh in faucibus. Integer mauris lorem, elementum non justo a, vehicula vehicula lorem.</p>
+                    <h3 class="text-xl font-bold mb-2 text-[#C5E1B5]">Memiliki Kemampuan Awal Bela Negara</h3>
+                    <p class="text-sm text-[#C5E1B5]">
+                        Kemampuan awal bela negara mencakup pengetahuan dan keterampilan dasar untuk mendukung pertahanan
+                        negara.
+                        Contohnya adalah memahami pentingnya keamanan nasional dan siap berkontribusi dalam situasi darurat.
+                    </p>
                 </div>
             </div>
         </div>
@@ -331,46 +356,37 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-6">
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/cover-welcome.png') }}" alt="Foto 1"
+                        <img src="{{asset('images/implementasi/sampah.jpg')}}" alt="Foto 1"
                             class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Membuang Sampah Pada Tempatnya</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <h3 class="font-semibold text-xl  mt-2">Membuang Sampah Pada Tempatnya</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 2" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Mentaati peraturan yang sudah berlaku</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/lalu-lintas.jpg')}}" alt="Foto 2" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Mentaati peraturan yang sudah berlaku</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 3" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Melakukan Demonstrasi</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/demo.jpg')}}" alt="Foto 3" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Melakukan Demonstrasi</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 4" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Meeting rutin progres project</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/foto-tim.png')}}" alt="Foto 4" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Meeting rutin progres project</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 5" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Survey Museum Perjuangan Indonesia</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/museum.jpg')}}" alt="Foto 5" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Survey Museum Perjuangan Indonesia</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/cover-welcome.png') }}" alt="Foto 6"
-                            class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Pembuatan Website Museum Bela Negara</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/ngoding.jpg')}}" alt="Foto 6" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Pembuatan Website Museum Bela Negara</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 7" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Pembentukan Struktur Organisasi</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/Prestasi.jpg')}}" alt="Foto 7" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Berprestasi untuk Bangsa</h3>
                     </a>
                     <a href="/Aboutshow" class="p-4">
-                        <img src="{{ asset('images/bg-home.png') }}" alt="Foto 8" class="w-full h-48 object-cover">
-                        <h3 class="font-semibold text-xl custom-underline mt-2">Meeting rutin progres project</h3>
-                        <p class="text-sm custom-underline">8 hours ago</p>
+                        <img src="{{asset('images/implementasi/gotong-royong.jpg')}}" alt="Foto 8" class="w-full h-48 object-cover">
+                        <h3 class="font-semibold text-xl  mt-2">Melakukan Gotong Royong</h3>
                     </a>
                 </div>
             </section>

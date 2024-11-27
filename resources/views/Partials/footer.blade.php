@@ -1,8 +1,8 @@
 <!-- resources/views/footer.blade.php -->
-<footer class="bg-green-950 text-white py-4 md:py-8">
+<footer class="bg-green-950 text-[#FEFAE0] py-4 md:py-8">
     <div class="w-full flex flex-col items-center md:flex-row md:justify-between mb-8 px-6 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2 text-center md:text-left">
-            <h2 class="text-3xl md:text-5xl font-bold text-[#FEFAE0]">
+            <h2 class="text-3xl md:text-5xl font-bold">
                 Bangkit Bela Negaraku<br>Jaya Indonesiaku
             </h2>
         </div>

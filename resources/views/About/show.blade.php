@@ -136,9 +136,8 @@
                     </div>
                 </div>
             </aside>
-
             <section class="lg:col-span-2">
-                <h1 class="text-4xl font-bold text-[#172812] text-center py-4 text-justify">Berprestasi untuk Bangsa:
+                <h1 class="text-4xl font-bold text-[#172812] text-center py-4">Berprestasi untuk Bangsa:
                     Implementasi Bela Negara dalam Kehidupan Sehari-hari</h1>
                 <div class="text-center mb-12">
                     <div class="flex items-center text-justify mt-4">
