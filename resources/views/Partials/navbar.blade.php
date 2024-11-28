@@ -2,7 +2,7 @@
     <div class="container mx-auto flex justify-between items-center">
         <!-- Logo di Kiri -->
         <div class="flex items-center space-x-4">
-            <img src="{{ asset('images/upn-logo.png') }}" alt="UPN Logo" class="h-12 w-12">
+            <img src="{{ asset('images/upn-logo.png') }}" alt="Upn Logo" class="h-12 w-12">
             <div class="text-[#FEFAE0]">
                 <h1 class="text-lg font-bold leading-tight">Museum Bela Negara</h1>
                 <p class="text-sm">UPN "Veteran" Jakarta</p>
