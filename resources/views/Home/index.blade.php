@@ -114,7 +114,7 @@
         <div class="md:flex items-start space-x-8 mx-auto w-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full md:w-1/2">
                 <a href="/Galleries/1" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{ asset('images/Galeri/perang-bandung/Foto-Perang/bandung1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/Galeri/perang-bandung/Foto-Perang/Bandung1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Bandung Lautan Api</h4>
                         <p class="text-sm text-[#272742]">Terjadi pada tahun 1946, di Bandung</p>
@@ -122,7 +122,7 @@
                 </a>
 
                 <a href="/Galleries/5" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{ asset('images/Galeri/perang-ponorogo/Foto-Perang/Jateng1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/Galeri/perang-ponorogo/Foto-perang/Jateng1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Peristiwa Perang Diponegoro </h4>
                         <p class="text-sm text-[#272742]">Terjadi pada tahun 1825, di Jawa Tengah</p>
@@ -138,7 +138,7 @@
                 </a>
 
                 <a href="/Galleries/3" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{ asset('images/Galeri/perang-banjar/Foto-Perang/Banjar1.jpg ') }}" alt="Foto" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/Galeri/perang-banjar/Foto-perang/Banjar1.jpg ') }}" alt="Foto" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Perang Banjar</h4>
                         <p class="text-sm text-[#272742]">Terjadi pada tahun 1859, di Kalimantan Selatan</p>

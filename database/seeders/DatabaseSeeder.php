@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
     <li><strong>Mayor Rukana:</strong> Komandan Polisi Militer Bandung yang turut menyusun rencana pembakaran Bandung Selatan.</li>
     <li><strong>Ismail Marzuki:</strong> Pencipta lagu "Indonesia Raya", yang juga menciptakan lagu "Bandung" sebagai bentuk penghormatan kepada kota Bandung yang telah menjadi saksi bisu perjuangan bangsa.</li>
 ',
-            "Media1"=>"/perang-bandung/Foto-perang/bandung1.jpg",
+            "Media1"=>"/perang-bandung/Foto-perang/Bandung1.jpg",
             "Media2"=>"/perang-bandung/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-bandung/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-bandung/pahlawan/pahlawan3.jpg",
