@@ -114,7 +114,7 @@
         <div class="md:flex items-start space-x-8 mx-auto w-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 w-full md:w-1/2">
                 <a href="/Galleries/1" class="bg-[#FBFCFE] rounded-lg shadow-md overflow-hidden block">
-                    <img src="{{ asset('images/Galeri/perang-bandung/Foto-Perang/Bandung1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
+                    <img src="{{ asset('images/Galeri/perang-bandung/Foto-perang/Bandung1.jpg') }}" alt="Foto" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-[#172812]">Bandung Lautan Api</h4>
                         <p class="text-sm text-[#272742]">Terjadi pada tahun 1946, di Bandung</p>
