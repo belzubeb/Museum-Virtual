@@ -168,7 +168,7 @@
             </section>
             <section class="mt-12 w-full">
                 <article class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-wrap md:flex-nowrap mb-8">
-                    <a href="" class="flex-shrink-0 w-full md:w-1/3">
+                    <a href="/Newsshow" class="flex-shrink-0 w-full md:w-1/3">
                         <img src="{{ asset('images/berita/berita5.png') }}" alt="Image 1"
                             class="w-full h-48 md:h-auto object-cover">
                     </a>
