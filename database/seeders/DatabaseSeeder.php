@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
     <li><strong>Mayor Rukana:</strong> Komandan Polisi Militer Bandung yang turut menyusun rencana pembakaran Bandung Selatan.</li>
     <li><strong>Ismail Marzuki:</strong> Pencipta lagu "Indonesia Raya", yang juga menciptakan lagu "Bandung" sebagai bentuk penghormatan kepada kota Bandung yang telah menjadi saksi bisu perjuangan bangsa.</li>
 ',
-            "Media1"=>"/perang-bandung/Foto-Perang/bandung1.jpg",
+            "Media1"=>"/perang-bandung/Foto-perang/bandung1.jpg",
             "Media2"=>"/perang-bandung/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-bandung/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-bandung/pahlawan/pahlawan3.jpg",
@@ -133,7 +133,7 @@ class DatabaseSeeder extends Seeder
     <li>Benteng Takko, dekat perbatasan Kutai</li>
     <li>Benteng Bamunan</li>
     <li>Benteng Terumbang<br>&nbsp;</li>',
-            "Media1"=>"/perang-banjar/Foto-Perang/Banjar1.jpg",
+            "Media1"=>"/perang-banjar/Foto-perang/Banjar1.jpg",
             "Media2"=>"/perang-banjar/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-banjar/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-banjar/pahlawan/pahlawan3.jpg",
@@ -192,7 +192,7 @@ class DatabaseSeeder extends Seeder
 <p>Perang Bali II meninggalkan bekas luka yang mendalam bagi masyarakat Bali. Kemenangan Belanda membawa perubahan besar dalam kehidupan masyarakat Bali. Sistem pemerintahan tradisional mereka runtuh dan digantikan oleh sistem kolonial. Budaya dan adat istiadat Bali pun mengalami perubahan yang signifikan akibat pengaruh Barat.</p>
 <p>&nbsp;</p>
 <p>Namun, semangat juang rakyat Bali tidak pernah padam. Perang Jagaraga menjadi simbol perlawanan terhadap penjajahan dan menginspirasi generasi-generasi berikutnya untuk terus memperjuangkan kemerdekaan. Kisah tentang keberanian dan kepahlawanan para pahlawan Bali dalam menghadapi kekuatan kolonial Belanda akan selalu dikenang sepanjang masa.</p>',
-            "Media1"=>"/perang-bali/Foto-Perang/Bali1.jpg",
+            "Media1"=>"/perang-bali/Foto-perang/Bali1.jpg",
             "Media2"=>"/perang-bali/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-bali/pahlawan/pahlawan2.jpeg",
             "Media4"=>"/perang-bali/pahlawan/pahlawan3.jpg",
@@ -242,7 +242,7 @@ class DatabaseSeeder extends Seeder
 <p>Selama lima tahun, perang berlangsung dengan sengit. Belanda mengalami kerugian besar baik dalam hal pasukan maupun harta benda. Namun, dengan segala kecanggihan senjata dan jumlah pasukan yang besar, Belanda tetap berusaha untuk menumpas perlawanan rakyat Jawa.</p>
 <p>&nbsp;</p>
 <p>Berbagai upaya dilakukan Belanda untuk menangkap Pangeran Diponegoro, namun selalu gagal. Sang pangeran bagaikan hantu yang menghantui pasukan Belanda. Namun, pada akhirnya, melalui tipu daya, Belanda berhasil menangkap Pangeran Diponegoro. Penangkapan ini menjadi pukulan telak bagi semangat juang rakyat Jawa.<br>Perang Diponegoro berakhir pada tahun 1830 dengan kemenangan Belanda. Namun, semangat juang rakyat Jawa tidak pernah padam. Perang ini meninggalkan warisan yang sangat berharga bagi bangsa Indonesia, yaitu semangat nasionalisme dan perlawanan terhadap penjajahan.</p>',
-            "Media1"=>"/perang-ponorogo/Foto-Perang/Jateng1.jpg",
+            "Media1"=>"/perang-ponorogo/Foto-perang/Jateng1.jpg",
             "Media2"=>"/perang-ponorogo/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-ponorogo/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-ponorogo/pahlawan/pahlawan3.jpg",
@@ -353,7 +353,7 @@ class DatabaseSeeder extends Seeder
     <li><strong>Mayor Sarbini:</strong> Salah satu komandan yang terlibat dalam serangan gerilya di sekitar Ambarawa.</li>
     <li><strong>Mayor Sugiyono:</strong> Pejuang yang turut memimpin pasukan TKR dalam serangan-serangan di Ambarawa.</li>
 ',
-            "Media1"=>"/perang-ambarawa/Foto-Perang/Ambarawa1.jpg",
+            "Media1"=>"/perang-ambarawa/Foto-perang/Ambarawa1.jpg",
             "Media2"=>"/perang-ambarawa/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-ambarawa/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-ambarawa/pahlawan/pahlawan3.jpg",
@@ -417,7 +417,7 @@ class DatabaseSeeder extends Seeder
 <p>Pertempuran berlangsung sengit di berbagai sudut kota. Gedung-gedung, jalanan, dan bahkan rumah warga menjadi saksi bisu dari pertempuran yang tak kenal kompromi ini.</p>
 <p>Selama lima hari, rakyat Semarang berjuang tanpa kenal lelah. Mereka menghadapi serangan balik dari pasukan Jepang dengan keberanian yang luar biasa. Meskipun kalah dalam hal persenjataan, semangat juang mereka tak pernah padam. Akhirnya, setelah lima hari bertempur, rakyat Semarang berhasil mengusir pasukan Jepang dari kota.</p>
 <p>Kemenangan dalam Pertempuran Lima Hari ini menjadi bukti nyata bahwa rakyat Indonesia tidak akan mudah menyerah dalam mempertahankan kemerdekaan. Semangat juang yang ditunjukkan oleh para pejuang Semarang menjadi inspirasi bagi seluruh rakyat Indonesia.</p>',
-            "Media1"=>"/perang-semarang/Foto-Perang/Semarang1.jpg",
+            "Media1"=>"/perang-semarang/Foto-perang/Semarang1.jpg",
             "Media2"=>"/perang-semarang/pahlawan/pahlawan1.jpeg",
             "Media3"=>"/perang-semarang/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-semarang/pahlawan/pahlawan3.jpg",
@@ -462,7 +462,7 @@ class DatabaseSeeder extends Seeder
 <p>&nbsp;</p>
 <p><strong>Kesimpulan dari Pertempuran Medan Area</strong></p>
 <p>Perjuangan Medan Area merupakan simbol perlawanan rakyat Indonesia di Sumatera Utara terhadap upaya penjajahan kembali oleh Belanda. Konflik ini menunjukkan bahwa semangat kemerdekaan sudah meresap ke seluruh pelosok Indonesia, bukan hanya di Jawa.<br>Pertempuran Medan Area menguatkan solidaritas antar pemuda dan rakyat dalam mempertahankan kemerdekaan, yang kemudian menjadi dasar bagi pembentukan tentara nasional. Banyak pejuang Medan Area yang kemudian bergabung dalam Tentara Keamanan Rakyat (TKR), cikal bakal TNI.<br>Belanda berhasil menguasai kota Medan pada tahun 1946, tetapi perlawanan rakyat tidak berhenti, dan terus berlanjut hingga akhirnya Belanda mengakui kemerdekaan Indonesia pada 27 Desember 1949. Pertempuran ini juga menunjukkan pentingnya strategi gerilya dan keteguhan dalam mempertahankan kemerdekaan.<br>Medan Area menjadi saksi dari semangat perlawanan yang heroik, yang menginspirasi perjuangan di daerah-daerah lain di Indonesia. Hingga saat ini, peristiwa ini dikenang sebagai bagian penting dari sejarah perjuangan kemerdekaan Indonesia.</p>',
-            "Media1"=>"/perang-medan/Foto-Perang/Medan1.jpg",
+            "Media1"=>"/perang-medan/Foto-perang/Medan1.jpg",
             "Media2"=>"/perang-medan/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-medan/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-medan/pahlawan/pahlawan3.jpeg",
@@ -508,7 +508,7 @@ class DatabaseSeeder extends Seeder
     <li><strong>Semangat Perjuangan:</strong> Pertempuran Surabaya menjadi simbol perjuangan dan keberanian rakyat Indonesia. Semangat juang yang ditunjukkan menginspirasi gerakan perlawanan di daerah lain di Indonesia.</li>
     <li><strong>Konflik Berkelanjutan:</strong> Meskipun pertempuran ini berakhir, ketegangan antara Indonesia dan pasukan Sekutu (termasuk Belanda) terus berlanjut, memicu konflik yang lebih besar hingga pengakuan kedaulatan Indonesia pada 1949.</li>
 ',
-            "Media1"=>"/perang-surabaya/Foto-Perang/Surabaya1.jpg",
+            "Media1"=>"/perang-surabaya/Foto-perang/Surabaya1.jpg",
             "Media2"=>"/perang-surabaya/pahlawan/pahlawan1.jpeg",
             "Media3"=>"/perang-surabaya/pahlawan/pahlawan2.png",
             "Media4"=>"/perang-surabaya/pahlawan/pahlawan3.jpeg",
@@ -551,7 +551,7 @@ class DatabaseSeeder extends Seeder
     <li><strong>Perubahan Sosial Budaya:</strong> Perang ini membawa perubahan besar dalam kehidupan masyarakat Batak, termasuk dalam bidang sosial, budaya, dan agama.</li>
     <li><strong>Penguasaan Belanda:</strong> Belanda berhasil menguasai wilayah Tapanuli, namun perjuangan rakyat Batak telah meninggalkan warisan semangat juang yang tak terlupakan.</li>
 ',
-            "Media1"=>"/perang-sisingamaraja/Foto-Perang/Sumut1.jpg",
+            "Media1"=>"/perang-sisingamaraja/Foto-perang/Sumut1.jpg",
             "Media2"=>"/perang-sisingamaraja/pahlawan/pahlawan1.jpg",
             "Media3"=>"/perang-sisingamaraja/pahlawan/pahlawan2.jpg",
             "Media4"=>"/perang-sisingamaraja/pahlawan/pahlawan.png",

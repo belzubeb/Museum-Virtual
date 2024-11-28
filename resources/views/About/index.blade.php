@@ -262,7 +262,7 @@
             <div class="carousel-container flex flex-col items-center mt-8">
                 <div class="carousel w-full md:w-4/6 lg:w-3/5 rounded-lg shadow-lg overflow-hidden relative">
                     <div class="carousel-slide">
-                        <img src="{{ asset('images/member/webdev.JPG') }}" alt="Team Image 1" class="w-full">
+                        <img src="{{ asset('images/member/Webdev.JPG') }}" alt="Team Image 1" class="w-full">
                     </div>
                     <div class="carousel-slide">
                         <img src="{{ asset('images/member/Design.JPG') }}" alt="Team Image 2" class="w-full">

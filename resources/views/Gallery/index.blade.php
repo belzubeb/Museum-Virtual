@@ -47,7 +47,7 @@
                                 <div class="flex flex-col md:flex-row-reverse items-center md:items-start">
                                     <div class="flex-1 md:pl-4 text-left md:text-right flex flex-col justify-between">
                                         <div>
-                                            <h2 class="text-5xl md:text-4xl font-bold text-[#172812]">{{ $gallery->Title}}</h2>
+                                            <h2 class="text-5xl font-bold text-[#172812]">{{ $gallery->Title}}</h2>
                                             <div class="text-[#272742] text-lg mt-4 overflow-hidden max-h-20">
                                                 {!! $gallery->Description !!}
                                             </div>                                        
