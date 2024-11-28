@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     <div class="slider-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col">
-                        <a href="/Aboutshow">
+                        <a href="/Newsshow">
                             <img src="{{ asset('images/berita/berita5.png') }}" alt="Image 1"
                                 class="w-full h-48 object-cover">
                         </a>
