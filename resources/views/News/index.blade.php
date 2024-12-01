@@ -165,7 +165,13 @@
                 <button id="rightArrow" class="slider-arrow right" onclick="slide(1)" aria-label="Next">
                     <img src="{{ asset('images/arrow-right.svg') }}" alt="" class="w-7">
                 </button>
+                <section class="mt-12 mb-12 w-full flex justify-end">
+                    <a href="/sendnews" 
+                       class="bg-green-900 text-[#FEFAE0] px-6 py-3 rounded-lg shadow-md hover:bg-green-950 transition duration-300">
+                        Tambah Berita
+                    </a>
             </section>
+            </section>            
             <section class="mt-12 w-full">
                 <article class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-wrap md:flex-nowrap mb-8">
                     <a href="/Newsshow" class="flex-shrink-0 w-full md:w-1/3">
@@ -229,7 +235,7 @@
                 </article>
             </section>
         </main>
-    </body>
+    
     <script>
         let currentIndex = 0;
         let autoSlideInterval;
@@ -292,3 +298,5 @@
             });
         });
     </script>
+    </body>
+    @endsection

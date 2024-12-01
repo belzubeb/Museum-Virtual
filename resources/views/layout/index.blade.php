@@ -8,7 +8,7 @@
     <meta name="description"
         content="Museum Bela Negara yang memperlihatkan sejarah dan seni dari masa perjuangan bangsa.">
     <title>Museum Bela Negara</title>
-    <link rel="icon" type="iamges/x-icon" href="{{asset ('images/upn-logo.png')}}"/>
+    <link rel="icon" href="{{asset ('images/upn-logo.png')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

@@ -15,7 +15,7 @@
         <div class="mb-4 md:mb-0 space-y-3">
             <h3 class="font-semibold text-lg mb-4">UPN Museum Virtual</h3>
             <p>Jalan R.S. Fatmawati Raya, Pondok Labu, Cilandak, South Jakarta City,<br>Jakarta 12450</p>
-            <p>Email: <a href="mailto:museumvirtualupnvj.com" class="underline text-blue-600">museumvirtualupnvj.com</a>
+            <p>Email: <a href="mailto:info@museumvirtualupnvj.com" class="underline text-blue-600">info@museumvirtualupnvj.com</a>
             </p>
             <p>Telepon: 085855004827</p>
         </div>

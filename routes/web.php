@@ -28,3 +28,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/Aboutshow', function (){
     return view ('About.show');
 });
+
+Route::get('/sendnews', function (){
+    return view ('News.send');
+});
